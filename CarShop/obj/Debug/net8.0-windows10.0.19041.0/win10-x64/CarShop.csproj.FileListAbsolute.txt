@@ -469,3 +469,4 @@ C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\b
 C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.winmd
 C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.winmd
 C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.UI.Xaml.Controls.pri
+C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CarShop.sourcelink.json

@@ -1082,3 +1082,4 @@ C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\o
 C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\obj\Debug\net8.0-android\android\src\crc64159f3caeb1269279\MauiSemanticOrderView.java
 C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\obj\Debug\net8.0-android\android\src\crc648fc34c62be8fbbff\Snackbar_SnackbarCallback.java
 C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\obj\Debug\net8.0-android\android\src\crc64d6358e7bf64fbac4\SpeechToTextImplementation_SpeechRecognitionListener.java
+C:\Users\Sylvester\OneDrive - Aarhus universitet\AU\4.semester\FED\FED\CarShop\obj\Debug\net8.0-android\CarShop.sourcelink.json

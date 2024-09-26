@@ -17,7 +17,7 @@ namespace CarShop.Models
         public string carBrand { get; set; }
         public string carModel { get; set; }
         public double RegistrationNumber { get; set; }
-        public DateTime handInTime { get; set; }
+        public DateTime handInDate { get; set; }
         public string carProblem { get; set; }
         
     }

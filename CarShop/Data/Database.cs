@@ -17,7 +17,7 @@ namespace CarShop.Data
         {
             var dataDir = FileSystem.AppDataDirectory;
             var databasePath = Path.Combine(dataDir, "MauiTodoV8.db");
-
+            Console.WriteLine($"Database path: {databasePath}");
             //string _dbEncryptionKey = SecureStorage.GetAsync("dbKey").Result;
 
             //if (string.IsNullOrEmpty(_dbEncryptionKey))
