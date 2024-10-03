@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             xmlns:vm="clr-namespace:CarShop.ViewModels"
+             x:Class="CarShop.Pages.FakturaPage">
+    <ContentPage.BindingContext>
+        <vm:FakturaViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+          MaximumWidthRequest="400"
+          Padding="20">
+
+        <Label Grid.Row="0"
+               Text="FakturaPage"
+               FontSize="Title"
+               SemanticProperties.HeadingLevel="Level1"
+               SemanticProperties.Description="Faktura Page"
+               HorizontalOptions="Center" />
+        <Entry
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            Placeholder="Enter Mechanic Name"
+            SemanticProperties.Hint="Mechanic Name"
+            WidthRequest="300"
+            Text="{Binding MechanicName}" />
+          
+        <Entry
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            Placeholder="Enter Materials"
+            SemanticProperties.Hint="Materials"
+            WidthRequest="300"
+            Text="{Binding Materials}" />
+        
+        <Entry
+            Grid.Row="3"
+            HorizontalOptions="Center"
+            Placeholder="Enter Materials Cost"
+            SemanticProperties.Hint="Materials Cost"
+            WidthRequest="300"
+            Text="{Binding MaterialsCost}" />
+
+        <Entry
+            Grid.Row="4"
+            HorizontalOptions="Center"
+            Placeholder="Enter Hours Worked"
+            SemanticProperties.Hint="Hours Worked"
+            WidthRequest="300"
+            Text="{Binding Hours}" />
+        <Entry
+            Grid.Row="5"
+            HorizontalOptions="Center"
+            Placeholder="Enter Hourly Rate"
+            SemanticProperties.Hint="Hourly Rate"
+            WidthRequest="300"
+            Text="{Binding HourlyRate}" />
+            
+        <Button Grid.Row="6"
+            Text="Add"
+            SemanticProperties.Hint="Adds Invoice to Database"
+            WidthRequest="100"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Command="{Binding AddNewFakturaItemCommand}"
+            >
+            <Button.Shadow>
+                <Shadow Brush="Black"
+                        Offset="5,5"
+                        Radius="10"
+                        Opacity="0.8" />
+            </Button.Shadow>
+        </Button>
+
+    </Grid>
+</ContentPage>

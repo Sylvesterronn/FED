@@ -1,4 +1,4 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CarShop"
@@ -9,6 +9,50 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="Black" />
+            </Style>
+
+            <Style TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="Beige" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+
+
+            <Style TargetType="Shell">
+                <Setter Property="BackgroundColor" Value="SteelBlue" />
+                <Setter Property="TitleColor" Value="Green" />
+                <Setter Property="TabBarBackgroundColor" Value="DarkSlateGray" />
+                <Setter Property="TabBarTitleColor" Value="White" />
+                <Setter Property="TabBarUnselectedColor" Value="Black" />
+            </Style>
+
+            <!-- ShellContent Styling -->
+            <Style TargetType="ShellContent">
+                <Setter Property="Shell.TitleColor" Value="Black" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="SteelBlue" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="Padding" Value="10,5" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="CustomStackStyle" TargetType="StackLayout">
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="BackgroundColor" Value="LightGray" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

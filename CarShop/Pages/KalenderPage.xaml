@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CarShop.ViewModels"
+             x:Class="CarShop.Pages.KalenderPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        <Label Text="Filter Car Shop Items" 
+               FontSize="Title" 
+               HorizontalOptions="Center" />
+
+        <!-- DatePicker for selecting the date -->
+        <DatePicker 
+            Date="{Binding SelectedDate}" 
+            HorizontalOptions="Center" 
+            SemanticProperties.Hint="Select a date to filter items" />
+
+        <!-- Button to filter items based on the selected date -->
+        <Button 
+            Text="Filter" 
+            Command="{Binding LoadFilteredItemsCommand}" 
+            HorizontalOptions="Center" />
+
+
+        <!-- ListView to display filtered items -->
+        <ContentView>
+            <ContentView.Content>
+                <CollectionView ItemsSource="{Binding CarShopItems}" IsVisible="{Binding IsListVisible}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" Margin="0,5">
+                                <Label Text="{Binding customerName}" 
+                                       FontSize="Medium" 
+                                       HorizontalOptions="Start"/>
+                                <Label Text="{Binding carBrand}" 
+                                       FontSize="Small" 
+                                       HorizontalOptions="Start" 
+                                       TextColor="Gray"/>
+                                <Label Text="{Binding handInDate}" 
+                                       FontSize="Small" 
+                                       HorizontalOptions="Start" 
+                                       TextColor="Brown"/>
+                                <!-- Add any additional properties you want to display -->
+                                <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,5"/> <!-- Optional Separator -->
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ContentView.Content>
+        </ContentView>
+        
+        
+    </StackLayout>
+</ContentPage>

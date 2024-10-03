@@ -29,11 +29,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = CarShop.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Sylvester/OneDrive - Aarhus universitet/AU/4.semester/FED/FED/CarShop/MainPage.xaml]
+[C:/Users/Sylvester/OneDrive - Aarhus universitet/AU/4.semester/FED/FED/CarShop/Pages/FakturaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = CarShop.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CarShop.Pages.FakturaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FakturaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FakturaPage.xaml
+
+[C:/Users/Sylvester/OneDrive - Aarhus universitet/AU/4.semester/FED/FED/CarShop/Pages/KalenderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CarShop.Pages.KalenderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\KalenderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\KalenderPage.xaml
+
+[C:/Users/Sylvester/OneDrive - Aarhus universitet/AU/4.semester/FED/FED/CarShop/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CarShop.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
 
 [C:/Users/Sylvester/OneDrive - Aarhus universitet/AU/4.semester/FED/FED/CarShop/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
