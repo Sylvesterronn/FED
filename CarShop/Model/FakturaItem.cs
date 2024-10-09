@@ -17,5 +17,7 @@ namespace CarShop.Models
         public double materialsCost { get; set; }
         public double hours { get; set; }
         public double hourlyRate { get; set; }
+
+        public int carShopItemId { get; set; }
     }
 }

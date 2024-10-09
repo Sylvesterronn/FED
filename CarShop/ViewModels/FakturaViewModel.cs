@@ -22,14 +22,16 @@ namespace CarShop.ViewModels
         public FakturaViewModel()
         {
             _database = new Database();
-            
+             FakturaItems = new ObservableCollection<FakturaItem>();
             _=Initialize();
         }
 
         
 
         private readonly Database _database;
-        public ObservableCollection<FakturaItem> FakturaItems { get; set; }
+        [ObservableProperty]
+        public ObservableCollection<FakturaItem> fakturaItems;
+
         [ObservableProperty]
         public string _mechanicName;
         [ObservableProperty]
@@ -40,6 +42,12 @@ namespace CarShop.ViewModels
         public double _hours; 
         [ObservableProperty]
         public double _hourlyRate;
+
+        [ObservableProperty]
+        public int _carShopItemId;
+
+        [ObservableProperty]
+        private bool _isListVisible;
     
 
         #region Methods
@@ -52,7 +60,8 @@ namespace CarShop.ViewModels
                 materials=Materials,
                 materialsCost=MaterialsCost,
                 hours=Hours,
-                hourlyRate=HourlyRate
+                hourlyRate=HourlyRate,
+                carShopItemId=CarShopItemId
             };
             var inserted = await _database.AddFakturaItem(newFakturaItem);
             await Initialize();
@@ -66,10 +75,57 @@ namespace CarShop.ViewModels
                 HourlyRate=0;
             }
         }
+
+        [RelayCommand]  
+        private async Task GetFakturaItem()
+        {
+            Console.WriteLine($"Querying database for FakturaItem");
+            try
+            {
+                var items = await _database.GetFakturaItem();
+                FakturaItems = new ObservableCollection<FakturaItem>(items);
+                IsListVisible = FakturaItems.Count > 0; 
+
+                Console.WriteLine($"Number of faktura items: {FakturaItems.Count()}");
+                foreach (var FakturaItem in FakturaItems)
+                {
+                    MechanicName = FakturaItem.mechanicName;
+                    Materials = FakturaItem.materials;
+
+                    Console.WriteLine($"Mechanic Name: {FakturaItem.mechanicName}, Materials: {FakturaItem.materials}");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                throw;
+            }
+    
+        }
+
+        [RelayCommand]
+        private async Task DeleteFakturaItem(FakturaItem fakturaItem)
+        {
+            try
+            {
+                var deleted = await _database.DeleteFakturaItem(fakturaItem);
+                if (deleted!=0)
+                {
+                    FakturaItems.Remove(fakturaItem);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                throw;
+            }
+        }
         private async Task Initialize()
         {
             var items = await _database.GetFakturaItem();
             FakturaItems = new ObservableCollection<FakturaItem>(items);
+            IsListVisible = false; // Show list only if there are items
+
         }
 
         #endregion Methods

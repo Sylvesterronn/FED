@@ -73,6 +73,11 @@ namespace CarShop.Data
             return await _connection.DeleteAsync(item);
         }
 
+        public async Task<int> DeleteFakturaItem(FakturaItem item)
+        {
+            return await _connection.DeleteAsync(item);
+        }
+
         public async Task<int> UpdateCarShopItem(CarShopItem item)
         {
             return await _connection.UpdateAsync(item);
@@ -101,5 +106,6 @@ namespace CarShop.Data
         {
             throw new NotImplementedException();
         }
+
     }
 }
